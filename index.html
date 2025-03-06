@@ -34,8 +34,8 @@
 <body class="bg-primary text-textPrimary w-full flex flex-col gap-y-5">
 <!-- Navbar -->
 <nav class="font-lato w-full flex items-center justify-center pt-5">
-    <div class="flex justify-between px-4 max-w-[1280px] w-full ">
-        <h1 class="text-xl font-bold">My Portfolio</h1>
+    <div class="flex justify-end md:justify-between px-4 max-w-[1280px] w-full ">
+        <h1 class="text-xl font-bold hidden md:block">My Portfolio</h1>
         <div class="relative">
             <a href="index.html" class="nav-link hover:text-accent/70 p-2" data-active="index.html">Profile</a>
             <div class="relative inline-block text-left">
@@ -45,11 +45,10 @@
                 </button>
                 <!-- Dropdown Menu -->
                 <div id="dropdown-menu"
-                     class="hidden absolute left-0 mt-2 p-2 w-40 bg-gray-800 text-white rounded-lg shadow-lg z-50
-                     md:w-48 md:left-auto md:right-0">
+                     class="hidden absolute right-4 mt-2 p-2 w-40 bg-gray-800 text-white rounded-lg shadow-lg z-50
+                     md:w-48 md:right-4">
                     <a href="pages/brandmanic.html" class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Brandmanic</a>
-                    <a href="pages/hubgrowth.html"
-                       class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Hubgrowth</a>
+                    <a href="pages/hubgrowth.html" class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Hubgrowth</a>
                     <a href="#projects" class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Other Projects</a>
                 </div>
             </div>
@@ -58,19 +57,20 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="w-full flex items-center justify-center h-auto "
+<header class="w-full flex items-center justify-center h-auto"
         style="background: linear-gradient(170deg, #0F172A 35%, #0B677F 65%); box-shadow: 0px 10px 20px rgba(153, 153, 153, 0.2);">
-    <div class="relative flex flex-col md:flex-row max-w-[1280px] w-full relative h-[550px] px-8">
+    <div class="relative flex flex-col md:flex-row max-w-[1280px] w-full h-[400px] md:h-[550px] px-4 md:px-8">
+
         <!-- Imagen de fondo -->
-        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center h-[540px] mt-2 w-full"
+        <div class="absolute inset-0 bg-no-repeat bg-cover md:bg-contain bg-center md:bg-right h-full"
              style="background-image: url('assets/general/coverBanner.png');">
         </div>
-        <!--Contenido-->
-        <div class="relative md:w-1/2 pr-14 pt-12 text-center md:text-left z-10">
-            <p class="text-secondary text-2xl md:text-xl  font-mono">Hello I’m</p>
-            <p class="text-[70px] leading-none flex flex-wrap w-3/5 font-bold text-white mt-4  font-mono">Oriana
-                Infante</p>
-            <p class=" mt-4 md:text-xl text-2xl text-gray-300 mt-2">
+
+        <!-- Contenido -->
+        <div class="relative w-1/2 md:pr-14 md:pt-12 text-left  z-10">
+            <p class="text-secondary text-lg md:text-xl font-mono">Hello I’m</p>
+            <p class="text-4xl md:text-[70px] leading-tight font-bold text-white mt-2 font-mono">Oriana Infante</p>
+            <p class="mt-4 text-sm md:text-xl text-gray-300">
                 Passionate about technology, development, and powerful interfaces, enthusiastic
                 about UX/UI. I have been involved in all phases of digital product creation, from gathering requirements
                 to designing interfaces and implementing them in both the frontend and backend.
@@ -151,67 +151,81 @@
 </section>
 
 <!-- My Projects Section -->
+<!-- My Projects Section -->
 <section id="projects" class="w-full flex justify-center">
     <div class="max-w-[1280px] w-full flex flex-col justify-center items-center">
         <h3 class="text-3xl font-semibold pt-10">My Projects</h3>
 
         <!-- Contenedor principal con FLEX -->
-        <div class="flex flex-wrap justify-center items-center gap-6 mt-6 w-full px-6 bg-accent">
+        <div class="flex justify-center items-center gap-6 mt-6 w-full p-3 h-[500px]">
 
-            <!-- Columna Izquierda (2 elementos en columna) -->
-            <div class="flex flex-col gap-6 h-[470px]">
-                <!-- Proyecto 1 -->
-                <div class="relative group w-[240px] h-[150px] rounded-lg overflow-hidden">
+            <!-- Columna Izquierda -->
+            <div class="flex flex-col gap-y-4 w-1/3 h-full">
+                <!-- Proyecto 1 - HubGrowth -->
+                <div class="relative group h-1/2 rounded-xl overflow-hidden">
                     <img src="assets/hubgrowth/Logo.png" alt="HubGrowth" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="https://hubgrowth.com" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
-                        <a href="pages/hubgrowth.html" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="https://www.thehubgrowth.com/" target="_blank" rel="noopener noreferrer"
+                           class="font-bold bg-secondary px-6 py-2 rounded-md hover:bg-[#EF2447] mb-4">Link to web</a>
+                        <a href="pages/hubgrowth.html"
+                           class="font-semibold px-6 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Link to project</a>
                     </div>
                 </div>
-
-                <!-- Proyecto 2 -->
-                <div class="relative group w-[240px] h-[150px] rounded-lg overflow-hidden">
+                <!-- Proyecto 2 - SteamDeck -->
+                <div class="relative group h-1/2 rounded-xl overflow-hidden">
                     <img src="assets/steamdeck/off.jpeg" alt="Console Project" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="https://www.linkedin.com/posts/oriana-infante-74843711a_primer-proyecto-full-stack-dveloper-con-activity-7088180946704699393-0d48?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB2btmgBORZAsXC61pEZhB4Hsi_tJVz5ecw"
+                           target="_blank" rel="noopener noreferrer"
+                           class="font-semibold px-6 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Link to project</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 3 (Elemento Grande en el Centro) -->
-            <div class="relative group w-[280px] h-[300px] rounded-lg overflow-hidden">
-                <img src="assets/brandmanic_new/Logo.png" alt="BrandManic" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                    <a href="https://brandmanic.com" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+            <!-- Proyecto 3 - BrandManic -->
+            <div class="relative group w-1/3 rounded-xl h-full overflow-hidden">
+                <img src="assets/brandmanic_new/brand.png" alt="BrandManic" class="w-full h-full object-cover" style="background: linear-gradient(200deg, #7E4C94 0%, #74779B 50%, #62A291 100%);">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <a href="pages/brandmanic.html"
+                       class="font-semibold px-6 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Link to project</a>
                 </div>
             </div>
 
-            <!-- Columna Derecha (3 elementos en columna) -->
-            <div class="flex flex-col gap-6">
-                <!-- Proyecto 4 -->
-                <div class="relative group w-[240px] h-[100px] rounded-lg overflow-hidden">
-                    <img src="assets/gamestore/gamestore.png" alt="Video Project" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="#" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
-                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+            <!-- Columna Derecha -->
+            <div class="flex flex-col gap-y-4 w-1/3 h-full">
+                <!-- Proyecto 4 - Game Store -->
+                <div class="relative group h-1/3 rounded-xl overflow-hidden">
+                    <img src="assets/gamestore/gamestore.png" alt="Game Store" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="https://frolicking-duckanoo-5e1a51.netlify.app/" target="_blank" rel="noopener noreferrer"
+                           class="font-bold bg-secondary px-6 py-2 rounded-md hover:bg-[#EF2447] mb-4">Link to web</a>
+                        <a href="https://www.linkedin.com/posts/oriana-infante-74843711a_proyecto-game-store-full-stack-developer-activity-7091788282182701056-Zerq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB2btmgBORZAsXC61pEZhB4Hsi_tJVz5ecw"
+                           target="_blank" rel="noopener noreferrer"
+                           class="font-semibold px-6 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Link to project</a>
                     </div>
                 </div>
 
-                <!-- Proyecto 5 -->
-                <div class="relative group w-[240px] h-[100px] rounded-lg overflow-hidden">
-                    <img src="assets/amose/amose.png" alt="Another Video Project" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="#" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
-                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                <!-- Proyecto 5 - Amose Restaurant -->
+                <div class="relative group h-1/3 rounded-xl overflow-hidden">
+                    <img src="assets/amose/amose.png" alt="Amose Restaurant" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="https://orianig.github.io/Amose-restaurant/" target="_blank" rel="noopener noreferrer"
+                           class="font-bold bg-secondary px-6 py-2 rounded-md hover:bg-[#EF2447] mb-4">Link to web</a>
+                        <a href="https://www.linkedin.com/posts/oriana-infante-74843711a_amose-restaurante-activity-7088186854092500992-l81e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB2btmgBORZAsXC61pEZhB4Hsi_tJVz5ecw"
+                           target="_blank" rel="noopener noreferrer"
+                           class="font-semibold px-6 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Link to project</a>
                     </div>
                 </div>
 
-                <!-- Proyecto 6 -->
-                <div class="relative group w-[240px] h-[100px] rounded-lg overflow-hidden">
+                <!-- Proyecto 6 - Angular Dashboard -->
+                <div class="relative group h-1/3 rounded-xl overflow-hidden">
                     <img src="assets/dash/Dash.jpeg" alt="Analytics Project" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="#" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
-                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="https://lnkd.in/dsReQtZQ" target="_blank" rel="noopener noreferrer"
+                           class="font-bold bg-secondary px-6 py-2 rounded-md hover:bg-[#EF2447] mb-4">Link to web</a>
+                        <a href="https://www.linkedin.com/posts/oriana-infante-74843711a_proyecto-angular-dashboard-full-stck-developer-activity-7097544217542950915-otZN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB2btmgBORZAsXC61pEZhB4Hsi_tJVz5ecw"
+                           target="_blank" rel="noopener noreferrer"
+                           class="font-semibold px-6 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Link to project</a>
                     </div>
                 </div>
             </div>
@@ -220,9 +234,8 @@
     </div>
 </section>
 
-
 <!-- Footer -->
-<footer class="text-center text-gray-400">
+<footer class="text-center text-gray-400 py-5">
     2025. Designed by Oriana Infante.
 </footer>
 </div>
