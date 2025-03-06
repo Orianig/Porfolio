@@ -52,23 +52,23 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="w-full flex items-center justify-center h-auto shadow-xl"
-        style="background: linear-gradient(170deg, #0F172A 35%, #0B677F 65%);">
-    <div class="relative flex flex-col md:flex-row max-w-[1280px] w-full relative h-[540px] px-8">
+<header class="w-full flex items-center justify-center h-auto "
+        style="background: linear-gradient(170deg, #0F172A 35%, #0B677F 65%); box-shadow: 0px 10px 20px rgba(153, 153, 153, 0.2);">
+    <div class="relative flex flex-col md:flex-row max-w-[1280px] w-full relative h-[550px] px-8">
         <!-- Imagen de fondo -->
         <div class="absolute inset-0 bg-no-repeat bg-cover bg-center h-[540px] mt-2 w-full"
              style="background-image: url('assets/general/coverBanner.png');">
         </div>
         <!--Contenido-->
         <div class="relative md:w-1/2 pr-14 pt-12 text-center md:text-left z-10">
-            <p class="text-secondary text-2xl md:text-xl">Hello I’m</p>
-            <p class="text-[70px] leading-none flex flex-wrap w-3/5 font-bold text-white mt-4">Oriana Infante</p>
-            <p class="mt-4 md:text-xl text-2xl text-gray-300 mt-2">
+            <p class="text-secondary text-2xl md:text-xl  font-mono">Hello I’m</p>
+            <p class="text-[70px] leading-none flex flex-wrap w-3/5 font-bold text-white mt-4  font-mono">Oriana Infante</p>
+            <p class=" mt-4 md:text-xl text-2xl text-gray-300 mt-2">
                 Passionate about technology, development, and powerful interfaces, enthusiastic
                 about UX/UI. I have been involved in all phases of digital product creation, from gathering requirements
                 to designing interfaces and implementing them in both the frontend and backend.
             </p>
-            <button id="download-cv" class="mt-6 font-bold bg-secondary text-white px-6 py-2 rounded-md hover:bg-[#EF2447]">
+            <button id="download-cv" class="mt-6 font-bold bg-white md:bg-secondary text-white px-6 py-2 rounded-md hover:bg-[#EF2447]">
                 Download CV
             </button>
         </div>
@@ -77,15 +77,64 @@
 
 
 <!-- What I Do Section -->
-<section class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-semibold">What I Do</h3>
-    <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div class="bg-gray-800 p-6 rounded-lg">Diseño y desarrollo de productos digitales</div>
-        <div class="bg-gray-800 p-6 rounded-lg">Desarrollo full stack con tecnologías modernas</div>
-        <div class="bg-gray-800 p-6 rounded-lg">Creación de interfaces centradas en el usuario</div>
-        <div class="bg-gray-800 p-6 rounded-lg">Gestión de bases de datos y despliegue en nube</div>
-        <div class="bg-gray-800 p-6 rounded-lg">Documentación y especificaciones funcionales</div>
-        <div class="bg-gray-800 p-6 rounded-lg">Gestión y coordinación de proyectos digitales</div>
+<section class="w-full flex items-center justify-center">
+    <div class="max-w-[1280px] w-full flex flex-col justify-center items-center">
+    <h3 class="text-3xl font-semibold pt-10">What I Do</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-8 w-full pt-10">
+        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                <i class="bi bi-palette text-[40px]"></i>
+                <p class="font-bold font-mono text-xl">Design and development of digital products</p>
+                <p class="font-regular text-sm leading-6">From conceptualization to final implementation, combining UI/UX design with full stack development to create intuitive and functional experiences.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                <i class="bi bi-code-slash text-[40px]"></i>
+                <p class="font-bold  font-mono text-xl">Full stack development with modern technologies</p>
+                <p class="font-regular text-sm leading-6">
+                    I implement robust applications using Angular, React and PHP (Symfony, Laravel), ensuring scalability, performance and maintainability.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                <i class="bi bi-person-fill text-[40px]"></i>
+                <p class="font-bold  font-mono text-xl">
+                    Creating user-centric interfaces</p>
+                <p class="font-regular text-sm leading-6">
+
+                    I design wireframes and prototypes in Figma, optimizing the user experience through visually appealing and usable interfaces.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                <i class="bi bi-cloud-arrow-down-fill text-[40px]"></i>
+                <p class="font-bold  font-mono text-xl">
+                    Database management and cloud deployment</p>
+                <p class="font-regular text-sm leading-6">
+
+                    Configuration and administration of databases in AWS (RDS, S3, EC2), MySQL and MongoDB, optimizing data structure and performance.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                <i class="bi bi-file-earmark-text-fill text-[40px]"></i>
+                <p class="font-bold  font-mono text-xl">
+                    Documentation and functional specifications</p>
+                <p class="font-regular text-sm leading-6">
+                    Writing Functional Specs and Business Requirements, ensuring clear communication between technical and product teams.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                <i class="bi bi-calendar-event-fill text-[40px]"></i>
+                <p class="font-bold  font-mono text-xl">
+                    Management and coordination of digital projects</p>
+                <p class="font-regular text-sm leading-6">
+                    Task organization, client management and development teams, using agile methodologies with tools such as Jira, Trello and Miro.</p>
+            </div>
+        </div>
+    </div>
     </div>
 </section>
 
