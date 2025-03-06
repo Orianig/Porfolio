@@ -15,10 +15,16 @@
                         secondary: "#F43F5E",
                         textPrimary: "#FFFFFF",
                         accent: "#06B6D4"
+                    },
+                    screens: {
+                        sm: "640px",
+                        md: "768px",
+                        lg: "1024px",
+                        xl: "1280px"
                     }
                 }
             }
-        }
+        };
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script type="module" src="js/index.js"></script>
@@ -62,90 +68,158 @@
         <!--Contenido-->
         <div class="relative md:w-1/2 pr-14 pt-12 text-center md:text-left z-10">
             <p class="text-secondary text-2xl md:text-xl  font-mono">Hello I’m</p>
-            <p class="text-[70px] leading-none flex flex-wrap w-3/5 font-bold text-white mt-4  font-mono">Oriana Infante</p>
+            <p class="text-[70px] leading-none flex flex-wrap w-3/5 font-bold text-white mt-4  font-mono">Oriana
+                Infante</p>
             <p class=" mt-4 md:text-xl text-2xl text-gray-300 mt-2">
                 Passionate about technology, development, and powerful interfaces, enthusiastic
                 about UX/UI. I have been involved in all phases of digital product creation, from gathering requirements
                 to designing interfaces and implementing them in both the frontend and backend.
             </p>
-            <button id="download-cv" class="mt-6 font-bold bg-white md:bg-secondary text-white px-6 py-2 rounded-md hover:bg-[#EF2447]">
+            <button id="download-cv" class="mt-6 font-bold bg-secondary px-6 py-2 rounded-md hover:bg-[#EF2447]">
                 Download CV
             </button>
         </div>
     </div>
 </header>
 
-
 <!-- What I Do Section -->
 <section class="w-full flex items-center justify-center">
     <div class="max-w-[1280px] w-full flex flex-col justify-center items-center">
-    <h3 class="text-3xl font-semibold pt-10">What I Do</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-8 w-full pt-10">
-        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
-            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
-                <i class="bi bi-palette text-[40px]"></i>
-                <p class="font-bold font-mono text-xl">Design and development of digital products</p>
-                <p class="font-regular text-sm leading-6">From conceptualization to final implementation, combining UI/UX design with full stack development to create intuitive and functional experiences.</p>
+        <h3 class="text-3xl font-semibold pt-10">What I Do</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-8 w-full pt-10">
+            <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+                <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                    <i class="bi bi-palette text-[40px]"></i>
+                    <p class="font-bold font-mono text-xl">Design and development of digital products</p>
+                    <p class="font-regular text-sm leading-6">From conceptualization to final implementation, combining
+                        UI/UX design with full stack development to create intuitive and functional experiences.</p>
+                </div>
             </div>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
-            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
-                <i class="bi bi-code-slash text-[40px]"></i>
-                <p class="font-bold  font-mono text-xl">Full stack development with modern technologies</p>
-                <p class="font-regular text-sm leading-6">
-                    I implement robust applications using Angular, React and PHP (Symfony, Laravel), ensuring scalability, performance and maintainability.</p>
+            <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+                <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                    <i class="bi bi-code-slash text-[40px]"></i>
+                    <p class="font-bold  font-mono text-xl">Full stack development with modern technologies</p>
+                    <p class="font-regular text-sm leading-6">
+                        I implement robust applications using Angular, React and PHP (Symfony, Laravel), ensuring
+                        scalability, performance and maintainability.</p>
+                </div>
             </div>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
-            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
-                <i class="bi bi-person-fill text-[40px]"></i>
-                <p class="font-bold  font-mono text-xl">
-                    Creating user-centric interfaces</p>
-                <p class="font-regular text-sm leading-6">
+            <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+                <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                    <i class="bi bi-person-fill text-[40px]"></i>
+                    <p class="font-bold  font-mono text-xl">
+                        Creating user-centric interfaces</p>
+                    <p class="font-regular text-sm leading-6">
 
-                    I design wireframes and prototypes in Figma, optimizing the user experience through visually appealing and usable interfaces.</p>
+                        I design wireframes and prototypes in Figma, optimizing the user experience through visually
+                        appealing and usable interfaces.</p>
+                </div>
             </div>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
-            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
-                <i class="bi bi-cloud-arrow-down-fill text-[40px]"></i>
-                <p class="font-bold  font-mono text-xl">
-                    Database management and cloud deployment</p>
-                <p class="font-regular text-sm leading-6">
+            <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+                <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                    <i class="bi bi-cloud-arrow-down-fill text-[40px]"></i>
+                    <p class="font-bold  font-mono text-xl">
+                        Database management and cloud deployment</p>
+                    <p class="font-regular text-sm leading-6">
 
-                    Configuration and administration of databases in AWS (RDS, S3, EC2), MySQL and MongoDB, optimizing data structure and performance.</p>
+                        Configuration and administration of databases in AWS (RDS, S3, EC2), MySQL and MongoDB,
+                        optimizing data structure and performance.</p>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+                <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                    <i class="bi bi-file-earmark-text-fill text-[40px]"></i>
+                    <p class="font-bold  font-mono text-xl">
+                        Documentation and functional specifications</p>
+                    <p class="font-regular text-sm leading-6">
+                        Writing Functional Specs and Business Requirements, ensuring clear communication between
+                        technical and product teams.</p>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
+                <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
+                    <i class="bi bi-calendar-event-fill text-[40px]"></i>
+                    <p class="font-bold  font-mono text-xl">
+                        Management and coordination of digital projects</p>
+                    <p class="font-regular text-sm leading-6">
+                        Task organization, client management and development teams, using agile methodologies with tools
+                        such as Jira, Trello and Miro.</p>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
-            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
-                <i class="bi bi-file-earmark-text-fill text-[40px]"></i>
-                <p class="font-bold  font-mono text-xl">
-                    Documentation and functional specifications</p>
-                <p class="font-regular text-sm leading-6">
-                    Writing Functional Specs and Business Requirements, ensuring clear communication between technical and product teams.</p>
-            </div>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl h-full hover:bg-[#1E2534] shadow-md">
-            <div class="flex flex-col gap-y-5 text-textPrimary items-center justify-center text-center">
-                <i class="bi bi-calendar-event-fill text-[40px]"></i>
-                <p class="font-bold  font-mono text-xl">
-                    Management and coordination of digital projects</p>
-                <p class="font-regular text-sm leading-6">
-                    Task organization, client management and development teams, using agile methodologies with tools such as Jira, Trello and Miro.</p>
-            </div>
-        </div>
-    </div>
     </div>
 </section>
 
 <!-- My Projects Section -->
-<section id="projects" class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-semibold">My Projects</h3>
-    <div class="grid md:grid-cols-2 gap-6 mt-6">
-        <div class="bg-purple-600 p-6 rounded-lg">hubgrowth</div>
-        <div class="bg-blue-600 p-6 rounded-lg">Brand Manic</div>
+<section id="projects" class="w-full flex justify-center">
+    <div class="max-w-[1280px] w-full flex flex-col justify-center items-center">
+        <h3 class="text-3xl font-semibold pt-10">My Projects</h3>
+
+        <!-- Contenedor principal con FLEX -->
+        <div class="flex flex-wrap justify-center items-center gap-6 mt-6 w-full px-6 bg-accent">
+
+            <!-- Columna Izquierda (2 elementos en columna) -->
+            <div class="flex flex-col gap-6 h-[470px]">
+                <!-- Proyecto 1 -->
+                <div class="relative group w-[240px] h-[150px] rounded-lg overflow-hidden">
+                    <img src="assets/hubgrowth/Logo.png" alt="HubGrowth" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="https://hubgrowth.com" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
+                        <a href="pages/hubgrowth.html" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="relative group w-[240px] h-[150px] rounded-lg overflow-hidden">
+                    <img src="assets/steamdeck/off.jpeg" alt="Console Project" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 (Elemento Grande en el Centro) -->
+            <div class="relative group w-[280px] h-[300px] rounded-lg overflow-hidden">
+                <img src="assets/brandmanic_new/Logo.png" alt="BrandManic" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <a href="https://brandmanic.com" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha (3 elementos en columna) -->
+            <div class="flex flex-col gap-6">
+                <!-- Proyecto 4 -->
+                <div class="relative group w-[240px] h-[100px] rounded-lg overflow-hidden">
+                    <img src="assets/gamestore/gamestore.png" alt="Video Project" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
+                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="relative group w-[240px] h-[100px] rounded-lg overflow-hidden">
+                    <img src="assets/amose/amose.png" alt="Another Video Project" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
+                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="relative group w-[240px] h-[100px] rounded-lg overflow-hidden">
+                    <img src="assets/dash/Dash.jpeg" alt="Analytics Project" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="bg-secondary text-white px-4 py-2 rounded-md mb-2">Link to web</a>
+                        <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md">Link to project</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
+
 
 <!-- Footer -->
 <footer class="text-center text-gray-400">
