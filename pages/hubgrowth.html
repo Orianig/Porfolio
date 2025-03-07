@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/png" href="/assets/general/icon.png">
+    <link href="/css/index.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0F172A",
+                        secondary: "#F43F5E",
+                        textPrimary: "#FFFFFF",
+                        accent: "#06B6D4"
+                    },
+                    screens: {
+                        sm: "640px",
+                        md: "768px",
+                        lg: "1024px",
+                        xl: "1280px"
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="module" src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@headlessui/react@latest/dist/headlessui.umd.production.min.js"></script>
 </head>
-<body>
-<h1>Soy hubgrowth</h1>
+<body class="text-textPrimary w-full flex flex-col gap-y-5 min-h-[100vh]"
+      style="background: linear-gradient(180deg, #0F172A 61%, rgba(15, 23, 42, 0.8) 100%);">
+<nav class="font-lato w-full flex items-center justify-center pt-5">
+    <div class="flex justify-end md:justify-between px-4 max-w-[1280px] w-full ">
+        <h1 class="text-xl font-bold hidden md:block">My Portfolio</h1>
+        <div class="relative">
+            <a href="../index.html" class="nav-link hover:text-accent/70 p-2" >Profile</a>
+            <div class="relative inline-block text-left">
+                <button id="dropdown-btn"
+                        class="inline-flex items-center gap-1 p-2 text-white hover:text-accent transition" data-active="hubgrowth.html">
+                    My Projects <i class="bi bi-caret-down-fill"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <div id="dropdown-menu"
+                     class="hidden absolute right-4 mt-2 p-2 w-40 bg-gray-800 text-white rounded-lg shadow-lg z-50
+                     md:w-48 md:right-4">
+                    <a href="brandmanic.html" class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Brandmanic</a>
+                    <a href="hubgrowth.html" class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Hubgrowth</a>
+                    <a href="../index.html#projects" class="block px-4 py-2 hover:rounded-lg hover:bg-accent/20">Other Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Contenido Principal -->
+<section class="max-w-[1280px] mx-auto px-6 py-5">
+    <h1 class="text-[50px] font-bold text-white font-mono">Hubgrowth</h1>
+    <p class="text-2xl text-gray-300 mt-4 font-semibold font-mono">Landing page design and web platform improvement for HubGrowth</p>
+
+    <p class="mt-4 text-gray-400 text-lg text-justify">
+        In this project, I designed and developed the landing pages for the HubGrowth website, a startup dedicated to enhancing soft skills to achieve professional and personal goals. The proposal focused on creating an attractive visual experience aligned with the brand identity, optimizing the content structure to improve conversion.
+    </p>
+    <p class="mt-4 text-gray-400 text-lg text-justify">
+        On the other hand, I participated in its web platform, redesigning the interface to improve usability and modernize its appearance, maintaining the essence of the original design but elevating the user experience with a more intuitive and functional aesthetic.
+    </p>
+    <hr class="my-6 w-full h-[2px] border-0" style="background: linear-gradient(to right, #06B6D4, #F43F5E);">
+
+
+    <div class="mt-8 w-full flex gap-x-5">
+        <div class="flex flex-col gap-y-4 w-full">
+            <a href="https://drive.google.com/drive/folders/1Zg24_Ka2a50STATxtmoVi3qkaL3f0hNx?usp=drive_link"
+               target="_blank" rel="noopener noreferrer"
+               class="font-mono font-semibold text-accent hover:underline">
+                Link to the drive of previous state of the landings &nbsp; &#128073;
+            </a>
+
+            <a href="https://www.thehubgrowth.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="font-mono font-semibold text-accent hover:underline">
+                Link to web &nbsp; &#128073;
+            </a>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
