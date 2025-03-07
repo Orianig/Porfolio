@@ -1,34 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function setupCarousel(carouselId, slideClass, prevBtnId, nextBtnId) {
-        const carousel = document.getElementById(carouselId);
+    function setupCarousel(carouselId, slideClass, indicatorClass) {
         const slides = document.querySelectorAll(`.${slideClass}`);
-        const prevBtn = document.getElementById(prevBtnId);
-        const nextBtn = document.getElementById(nextBtnId);
-
+        const indicators = document.querySelectorAll(`.${indicatorClass}`);
         let currentSlide = 0;
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
                 slide.classList.toggle("hidden", index !== currentSlide);
             });
-        }
 
-        if (nextBtn && prevBtn) {
-            nextBtn.addEventListener("click", function () {
-                currentSlide = (currentSlide + 1) % slides.length;
-                updateCarousel();
-            });
-
-            prevBtn.addEventListener("click", function () {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                updateCarousel();
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle("bg-secondary", index === currentSlide);
+                indicator.classList.toggle("bg-gray-500", index !== currentSlide);
             });
         }
 
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener("click", () => goToSlide(index));
+        });
+
+        function autoAdvance() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        setInterval(autoAdvance, 5000);
         updateCarousel();
     }
 
-    // Inicializa los dos carruseles
-    setupCarousel("carousel-previo", "carousel-previo-slide", "prev-slide-previo", "next-slide-previo");
-    setupCarousel("carousel-nueva", "carousel-nueva-slide", "prev-slide-nueva", "next-slide-nueva");
+    setupCarousel("carousel-prev", "carousel-prev-slide", "carousel-prev-indicator");
+    setupCarousel("carousel-new", "carousel-new-slide", "carousel-new-indicator");
 });
